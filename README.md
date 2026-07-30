@@ -47,22 +47,45 @@ para pegar en Jira / Confluence / Notion.
 
 ## Instalacion
 
-El plugin se distribuye como **marketplace local** (`po-tools`). En una terminal `claude`
-interactiva:
+El plugin se distribuye como marketplace `po-tools` desde este repo:
+**[Ferjapolisgp/PO_interlocutor](https://github.com/Ferjapolisgp/PO_interlocutor)**.
+Todos los comandos van en una terminal `claude` interactiva.
+
+### Desde GitHub (recomendado, para el equipo)
 
 ```
-/plugin marketplace add D:\extras\PO_interlocutor
+/plugin marketplace add Ferjapolisgp/PO_interlocutor
 ```
 ```
 /plugin install po-analytics@po-tools
 ```
 
 Reinicia la sesion cuando lo pida. Verifica con `/help`: deberias ver el command `/rice`
-y disponer de los 7 skills. Para actualizar tras cambios locales:
+y disponer de los 7 skills.
+
+Para actualizar a la ultima version publicada:
 
 ```
 /plugin marketplace update po-tools
 ```
+
+> Si el repo es **privado**, cada persona necesita acceso al repo y su `git`/`gh`
+> autenticado; Claude Code usa esas credenciales para clonarlo. Si es **publico**,
+> funciona sin configuracion extra.
+
+### Desde una copia local (para desarrollar el plugin)
+
+Si clonaste el repo y quieres probar cambios antes de publicarlos, apunta el marketplace
+a la ruta local en vez de a GitHub:
+
+```
+/plugin marketplace add ./PO_interlocutor
+```
+```
+/plugin install po-analytics@po-tools
+```
+
+Tras editar skills, recarga con `/plugin marketplace update po-tools`.
 
 > Los slash commands `/plugin` abren un panel interactivo; no funcionan en sesiones no
 > interactivas. Corrélos desde la terminal de Claude Code.
@@ -211,6 +234,12 @@ El proyecto sigue [SemVer](https://semver.org/lang/es/). Los cambios notables se
 ---
 
 ## Extender el plugin
+
+Clona el repo para trabajar en el:
+
+```
+git clone https://github.com/Ferjapolisgp/PO_interlocutor.git
+```
 
 Para anadir un skill nuevo:
 

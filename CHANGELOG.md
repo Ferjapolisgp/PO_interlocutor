@@ -37,5 +37,5 @@ Primera version. Andamiaje completo del plugin y marketplace local.
 - `.gitignore` que protege el `.mcp.json` real con credenciales.
 - Licencia **MIT** (`LICENSE`) y campo `license` en `plugin.json`.
 
-[No publicado]: https://example.com/compare
-[0.1.0]: https://example.com/releases/0.1.0
+[No publicado]: https://github.com/Ferjapolisgp/PO_interlocutor/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/Ferjapolisgp/PO_interlocutor/releases/tag/v0.1.0
