@@ -49,9 +49,23 @@ para pegar en Jira / Confluence / Notion.
 
 El plugin se distribuye como marketplace `po-tools` desde este repo:
 **[Ferjapolisgp/PO_interlocutor](https://github.com/Ferjapolisgp/PO_interlocutor)**.
-Todos los comandos van en una terminal `claude` interactiva.
+El plugin se llama `po-analytics`; el identificador completo para instalar es
+**`po-analytics@po-tools`**.
 
-### Desde GitHub (recomendado, para el equipo)
+Como es un bundle de skills, se instala en cualquier host que soporte Agent Skills:
+
+### Claude Desktop
+
+1. Ve a **Settings -> Customize -> Connectors**.
+2. Junto a **Personal plugins** pulsa **+**, luego **Add -> Add marketplace**.
+3. Elige **Add from a repository**.
+4. Introduce la URL del repo: `https://github.com/Ferjapolisgp/PO_interlocutor`
+5. Pulsa **Sync** y busca **PO Analytics** en el marketplace.
+6. Pulsa **Install**.
+
+### Claude Code
+
+En una terminal `claude` interactiva:
 
 ```
 /plugin marketplace add Ferjapolisgp/PO_interlocutor
@@ -61,22 +75,43 @@ Todos los comandos van en una terminal `claude` interactiva.
 ```
 
 Reinicia la sesion cuando lo pida. Verifica con `/help`: deberias ver el command `/rice`
-y disponer de los 7 skills.
-
-Para actualizar a la ultima version publicada:
+y disponer de los 7 skills. Para actualizar a la ultima version publicada:
 
 ```
 /plugin marketplace update po-tools
 ```
 
-> Si el repo es **privado**, cada persona necesita acceso al repo y su `git`/`gh`
-> autenticado; Claude Code usa esas credenciales para clonarlo. Si es **publico**,
-> funciona sin configuracion extra.
+> Los slash commands `/plugin` abren un panel interactivo; corrélos desde la terminal de
+> Claude Code (no funcionan en sesiones no interactivas).
+
+### ChatGPT Desktop / Codex
+
+**Desde la app:**
+
+1. Abre **Plugins** y elige **Add marketplace**.
+2. Anade el repo de GitHub: `Ferjapolisgp/PO_interlocutor`
+3. Busca e instala **PO Analytics**.
+4. Inicia una tarea nueva para cargar los skills.
+
+**Desde la CLI:**
+
+```bash
+codex plugin marketplace add Ferjapolisgp/PO_interlocutor
+codex plugin add po-analytics@po-tools
+```
+
+Para actualizar: `codex plugin marketplace upgrade po-tools`
+
+### Cursor y otros agentes (Skills CLI)
+
+```
+npx skills add Ferjapolisgp/PO_interlocutor
+```
 
 ### Desde una copia local (para desarrollar el plugin)
 
-Si clonaste el repo y quieres probar cambios antes de publicarlos, apunta el marketplace
-a la ruta local en vez de a GitHub:
+Si clonaste el repo y quieres probar cambios antes de publicarlos, apunta el marketplace a la
+ruta local en vez de a GitHub:
 
 ```
 /plugin marketplace add ./PO_interlocutor
@@ -87,8 +122,8 @@ a la ruta local en vez de a GitHub:
 
 Tras editar skills, recarga con `/plugin marketplace update po-tools`.
 
-> Los slash commands `/plugin` abren un panel interactivo; no funcionan en sesiones no
-> interactivas. Corrélos desde la terminal de Claude Code.
+> Si el repo es **privado**, cada persona necesita acceso al repo y su `git`/`gh` autenticado;
+> el host usa esas credenciales para clonarlo. Si es **publico**, funciona sin configuracion extra.
 
 ---
 
