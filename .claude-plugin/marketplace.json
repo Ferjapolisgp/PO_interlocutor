@@ -1,0 +1,17 @@
+{
+  "name": "po-tools",
+  "owner": {
+    "name": "barroso.ouharriet"
+  },
+  "metadata": {
+    "description": "Marketplace local con herramientas analiticas para Product Owners.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "po-analytics",
+      "source": "./",
+      "description": "Caja de herramientas analiticas para Product Owners: priorizacion (RICE, WSJF, Kano), metricas de producto (North Star), escritura de historias (Gherkin/INVEST) y analitica de sprint."
+    }
+  ]
+}

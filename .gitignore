@@ -1,0 +1,9 @@
+# Conectores MCP reales (contienen credenciales) — nunca commitear
+.mcp.json
+
+# Config local de Claude
+.claude/settings.local.json
+
+# SO / editores
+.DS_Store
+Thumbs.db

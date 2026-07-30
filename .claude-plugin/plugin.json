@@ -1,0 +1,19 @@
+{
+  "name": "po-analytics",
+  "version": "0.1.0",
+  "description": "Caja de herramientas analiticas para Product Owners: priorizacion (RICE, WSJF), metricas de producto (North Star, funnel), escritura de historias y analitica de sprint. Conecta con Jira/Linear/Amplitude via MCP.",
+  "author": {
+    "name": "barroso.ouharriet"
+  },
+  "keywords": [
+    "product-owner",
+    "product-management",
+    "analytics",
+    "prioritization",
+    "agile",
+    "rice",
+    "wsjf",
+    "metrics",
+    "sprint"
+  ]
+}

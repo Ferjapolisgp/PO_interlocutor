@@ -1,0 +1,27 @@
+{
+  "//": "Copia este archivo a .mcp.json y configura los conectores que uses. Cada skill hace el calculo; estos conectores traen los datos reales (backlog, metricas). Ajusta los comandos/URLs a tu setup.",
+
+  "mcpServers": {
+    "//jira": "Backlog, sprints y velocity. Usado por prioritize-rice y sprint-analytics.",
+    "atlassian": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
+    },
+
+    "//linear": "Alternativa a Jira para backlog e issues.",
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"]
+    },
+
+    "//amplitude": "Analitica de producto: funnels, retencion, eventos. Usado por metrics-north-star.",
+    "amplitude": {
+      "command": "npx",
+      "args": ["-y", "@amplitude/mcp-server"],
+      "env": {
+        "AMPLITUDE_API_KEY": "TU_API_KEY",
+        "AMPLITUDE_SECRET_KEY": "TU_SECRET_KEY"
+      }
+    }
+  }
+}
