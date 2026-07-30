@@ -35,6 +35,7 @@ Primera version. Andamiaje completo del plugin y marketplace local.
 - **Marketplace local** `po-tools` (`.claude-plugin/marketplace.json`) para instalar el plugin.
 - **Ejemplo de conectores MCP** (`.mcp.json.example`) para Jira, Linear y Amplitude.
 - `.gitignore` que protege el `.mcp.json` real con credenciales.
+- Licencia **MIT** (`LICENSE`) y campo `license` en `plugin.json`.
 
 [No publicado]: https://example.com/compare
 [0.1.0]: https://example.com/releases/0.1.0

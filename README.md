@@ -27,6 +27,7 @@ para pegar en Jira / Confluence / Notion.
 - [Estructura del repo](#estructura-del-repo)
 - [Versionado](#versionado)
 - [Extender el plugin](#extender-el-plugin)
+- [Licencia](#licencia)
 
 ---
 
@@ -221,3 +222,10 @@ Para anadir un skill nuevo:
 
 **Roadmap** de proximos skills: funnel/conversion, cohortes/retencion, INVEST checker
 independiente, Opportunity Solution Tree, RICE vs. WSJF comparativo en un solo paso.
+
+---
+
+## Licencia
+
+[MIT](LICENSE) (c) 2026 barroso.ouharriet. Uso, modificacion y redistribucion libres
+manteniendo el aviso de copyright.
